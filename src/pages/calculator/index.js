@@ -83,9 +83,10 @@ function App() {
         const count = await contract.methods
           .usageCount()
           .call({ from: senderAddress });
-        setResult(Number(result));
+        console.log(result);
+        setResult(result?.toString());
 
-        setUsageCount(Number(count));
+        setUsageCount(count?.toString());
       } catch (error) {
         console.error("Error:", error);
       }
