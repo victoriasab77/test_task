@@ -1,0 +1,229 @@
+body {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#2196f3, #e91e63);
+}
+
+.button--conectMetamask {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.button--Metamask {
+  display: inline-block;
+  width: 100%;
+  height: 6vh;
+  border-radius: 0.7em;
+  background: transparent;
+  color: #ffff;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: none;
+  border-bottom: none;
+  font: 1.1em sans-serif;
+}
+.button--Metamask-connected {
+  display: inline-block;
+  width: 100%;
+  height: 6vh;
+  border-radius: 0.7em;
+  background: transparent;
+  color: #ffff;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: none;
+  border-bottom: none;
+  font: 1.1em sans-serif;
+}
+.button--Metamask-connected:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.button--Metamask:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.container--calculator {
+  /* Just to center the form on the page */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+  width: 58vh;
+  height: 33vh;
+  z-index: 1;
+  padding: 1em;
+  padding-right: 1em;
+  border-radius: 1em;
+  background: transparent;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: none;
+  border-bottom: none;
+}
+
+.container--bubbles {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div + div {
+  margin-top: 1em;
+}
+
+label {
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+}
+
+select {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 235px;
+  background: transparent;
+  color: #ffff;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: none;
+  border-bottom: none;
+  font: 1.5em sans-serif;
+}
+
+.calculator__select {
+  border-radius: 0.5em;
+}
+.calculator__select:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+input,
+textarea {
+  font: 1.5em sans-serif;
+  width: 100%;
+  height: 50px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.calculator__input {
+  border-radius: 0.8em;
+  background: transparent;
+  color: #ffff;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: none;
+  border-bottom: none;
+}
+.calculator__input::placeholder {
+  color: #ffff;
+}
+.calculator__input:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+input:focus,
+textarea:focus {
+  border-color: #000;
+}
+
+.calculator__button {
+  padding-left: 31%;
+}
+
+.calculator__calculate-button {
+  margin-left: 0.5em;
+  width: 150px;
+  height: 35px;
+  border-radius: 0.7em;
+  background: transparent;
+  color: #ffff;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: none;
+  border-bottom: none;
+  font: 1.1em sans-serif;
+}
+.calculator__calculate-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.calculator__result {
+  color: #ffff;
+  font: 1.2em sans-serif;
+}
+
+.calculator__used-label {
+  color: #ffff;
+  font: 1.2em sans-serif;
+  padding-left: 27%;
+}
+
+@media (max-width: 768px) {
+  /* Для пристроїв з шириною екрану менше або рівно 768px */
+  .container--calculator {
+    width: 90%;
+    max-width: 600px;
+  }
+
+  .calculator__input,
+  .calculator__select {
+    width: 100%;
+  }
+  span.calculator__result {
+    padding-left: 90px;
+  }
+
+  label {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+
+  .calculator__button {
+    padding-left: 40px;
+  }
+
+  .calculator__used-label {
+    padding-left: 0;
+    padding-top: 20px;
+  }
+
+  /* Додатковий відступ для елементу select */
+  .calculator__select {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Для пристроїв з шириною екрану менше або рівно 480px */
+  .calculator__input,
+  .calculator__select {
+    font-size: 1.2em;
+  }
+
+  .calculator__calculate-button {
+    width: 100%;
+    margin-left: 0;
+  }
+  div.calculator__button {
+    padding-left: 0;
+  }
+  span.calculator__result {
+    padding-left: 70px;
+  }
+  .calculator__used-label {
+    padding-left: 20px;
+  }
+}
